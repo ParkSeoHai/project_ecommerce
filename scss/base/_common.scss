@@ -1,0 +1,133 @@
+@use "variables";
+@use "mixin";
+
+/* Common */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  background-color: #f5f5f5;
+  padding-bottom: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$txt-dark;
+}
+
+.icon {
+  font: {
+    size: 24px;
+  };
+}
+
+.bg-color-white {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Product item */
+.list-product {
+  .item {
+    padding: 4px;
+    background-color: variables.$color-white;
+    border: 1px solid #ededed;
+    &:hover .icon-hover {
+      //filter: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08));
+      display: block;
+    }
+    &:hover img {
+      scale: 1;
+    }
+
+    .img {
+      position: relative;
+      border: 2px solid variables.$bg-primary;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      //height: 200px;
+      object-fit: cover;
+      transition: scale linear 0.4s;
+      scale: 0.9;
+    }
+    .content {
+      padding: 0 6px;
+    }
+    .title {
+      @include mixin.d-webkit-box();
+      min-height: 46px;
+      line-height: 18px;
+      padding-top: 10px;
+      font: {
+        size: 14px;
+        weight: 400;
+      };
+      color: variables.$txt-dark;
+    }
+    .list-variants {
+      font-size: 12px;
+      color: variables.$txt-dark;
+    }
+    .box-pro-prices {
+      span {
+        font: {
+          size: 14px;
+          weight: 600;
+        };
+        color: red;
+      }
+      .compare-price {
+        font-size: 13px;
+        color: #c5c5c5;
+      }
+    }
+    .hash-tag-loop {
+      font-size: 12px;
+      background: #f3f4f6;
+      border-radius: 6px;
+      margin-top: 8px;
+      border: 1px solid #e5e7eb;
+      li {
+        padding: 4px;
+        color: variables.$txt-dark;
+      }
+    }
+
+    .icon-hover {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      border: 1px solid #cccccc;
+      box-shadow: 0 0 3px #828282;
+      color: variables.$txt-dark;
+      background-color: variables.$color-white;
+      animation: display-icon-hover ease-in-out 0.2s;
+    }
+
+    @keyframes display-icon-hover {
+      0% {
+        width: 0;
+        height: 0;
+      }
+      100% {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

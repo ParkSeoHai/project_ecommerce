@@ -1,0 +1,71 @@
+@use "../base/mixin";
+@use "../base/variables";
+
+.section-home-blog {
+  margin-top: 14px;
+  .top-head {
+    margin-bottom: 15px;
+    h2 {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-left: 12px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #000;
+      }
+    }
+    a {
+      font-size: 14px;
+      color: #828282;
+    }
+    i {
+      font-size: 10px;
+    }
+  }
+
+  .blog-body {
+    .content {
+      margin-bottom: 15px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .title {
+      @include mixin.d-webkit-box();
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 12px;
+      line-height: 20px;
+    }
+    .desc {
+      @include mixin.d-webkit-box(3);
+      font-size: 14px;
+      color: variables.$txt-dark;
+      margin-top: 8px;
+      line-height: 20px;
+    }
+    .time {
+      margin-top: 8px;
+      font-size: 13px;
+      .icon {
+        font-size: 13px;
+        margin-right: 6px;
+      }
+    }
+
+    .item {
+      margin-bottom: 12px;
+      .title {
+        font-size: 14px;
+      }
+    }
+  }
+}

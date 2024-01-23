@@ -1,0 +1,11 @@
+.product-search {
+  margin-top: 20px;
+  .list-product-search {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .item {
+    max-width: 230px;
+  }
+}

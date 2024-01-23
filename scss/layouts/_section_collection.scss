@@ -1,0 +1,84 @@
+@use "../base/variables";
+
+.section_collection_group {
+  margin-top: 14px;
+
+  .top-head {
+    margin-bottom: 15px;
+    h2 {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-left: 12px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #000;
+      }
+    }
+    .menu-col {
+      gap: 6px;
+      a {
+        padding: 8px;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        background: #ededed;
+        font-size: 14px;
+        transition: background-color ease-in-out 0.3s;
+        &:hover {
+          background-color: variables.$bg-primary;
+          color: variables.$color-white;
+        }
+      }
+    }
+  }
+
+  .block-collection-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+
+    .item {
+      padding-bottom: 8px;
+      border: 1px solid #ededed;
+      border-radius: 0;
+      &:hover {
+        filter: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08));
+      }
+      img {
+        height: 200px;
+      }
+    }
+  }
+
+  // Bottom
+  .collection-bottom {
+    padding-top: 24px;
+    padding-bottom: 6px;
+    .link {
+      text-align: center;
+      a {
+        font-size: 14px;
+        background-color: variables.$bg-primary;
+        color: variables.$color-white;
+        padding: 12px 62px;
+        border-radius: 5px;
+        &:hover {
+          background-color: #fff;
+          color: variables.$txt-primary;
+          transition: background-color linear 0.3s;
+          border: 1px solid variables.$txt-primary;
+        }
+        i {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

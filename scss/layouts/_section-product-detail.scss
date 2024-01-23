@@ -1,0 +1,195 @@
+@use "../base/variables";
+
+.product-detail {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .img-active {
+    text-align: center;
+    overflow: hidden;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  .product-thumb {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* width */
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(100, 1fr);
+      column-gap: 6px;
+    }
+    .item {
+      width: 85px;
+      height: 85px;
+      &.active {
+        border: 1px solid #333;
+      }
+    }
+  }
+
+  .product-content-info {
+    .title {
+      margin-bottom: 20px;
+    }
+    h1 {
+      position: relative;
+      font-size: 24px;
+      font-weight: 600;
+      color: variables.$txt-dark;
+      text-transform: capitalize;
+      padding-bottom: 30px;
+      span {
+        content: "Còn hàng";
+        position: absolute;
+        color: variables.$color-white;
+        padding: 4px 8px;
+        font-size: 11px;
+        border-radius: 3px;
+        display: inline-block;
+        bottom: 0;
+        left: 5px;
+        &.green {
+          background-color: #38bf57;
+        }
+        &.red {
+          background-color: red;
+        }
+      }
+    }
+    .product-info {
+      font-size: 14px;
+      margin-bottom: 20px;
+      a {
+        color: variables.$txt-primary;
+        font-weight: bold;
+      }
+      .line-info {
+        border: 1px solid #000;
+        margin: 0 12px;
+      }
+    }
+    .product-price {
+      margin-bottom: 10px;
+      .price-now {
+        font-size: 22px;
+        font-weight: 700;
+        color: red;
+        margin-right: 12px;
+      }
+      .price-compare {
+        font-size: 16px;
+        color: #919191;
+      }
+    }
+    .select-wrap {
+      font-size: 13px;
+      padding-top: 10px;
+      .select-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-bottom: 1px solid #ccc;
+        .item {
+          padding: 10px 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          cursor: pointer;
+          &.active {
+            position: relative;
+            border: 1px solid #dc1515;
+            overflow: hidden;
+            &:after {
+              position: absolute;
+              content: "";
+              right: 0;
+              bottom: 0;
+              border-left: 12px solid transparent;
+              border-bottom: 12px solid #dc1515;
+            }
+          }
+        }
+      }
+    }
+  }
+  .selector-actions {
+    padding-top: 10px;
+    .quantity-area {
+      max-width: 140px;
+      border: 1px solid #ccc;
+    }
+    button {
+      border: none;
+      font-size: 22px;
+      background-color: #fff;
+      padding: 6px 16px;
+    }
+    input {
+      text-align: center;
+      border: none;
+      width: 40px;
+      font-size: 16px;
+    }
+  }
+  .wrap-addcart {
+    button {
+      span:last-child {
+        font-size: 13px;
+      }
+    }
+  }
+  .service-product {
+    .head-title {
+      font-size: 16px;
+      background: #38bf57;
+      color: #fff;
+      padding: 8px 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      font-weight: 600;
+    }
+    ul {
+      padding: 0 10px 10px 10px;
+      border: 1px solid #ccc;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    i {
+      font-size: 24px;
+    }
+    .content {
+      font-size: 14px;
+      color: variables.$txt-dark;
+      line-height: 20px;
+    }
+  }
+}

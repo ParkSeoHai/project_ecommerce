@@ -1,0 +1,45 @@
+@use "../base/variables";
+
+/* Main Home Slider */
+#home-slider {
+  overflow: hidden;
+  .nav-group {
+    .list-menu-nav {
+      max-height: 350px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      border-right: none;
+    }
+
+    .nav-link {
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .icon {
+        font-size: 18px;
+      }
+
+      &:hover > .content span {
+        color: variables.$colorShopHover;
+      }
+    }
+  }
+
+  .banner-slider {
+    height: 320px;
+  }
+
+  .banner-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

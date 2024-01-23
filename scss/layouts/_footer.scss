@@ -1,0 +1,112 @@
+@use "../base/variables";
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #000;
+  .footer-top {
+    padding: 15px 0;
+    .title-regis {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 17px;
+    }
+    .form-send-mail {
+      .form-group {
+        position: relative;
+      }
+      input[type='email'] {
+        padding: 12px 100px 12px 36px;
+        font-size: 14px;
+        border: none;
+        min-width: 400px;
+        &:focus-visible {
+          border: none;
+          outline: none;
+        }
+      }
+      label.email {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555;
+      }
+      .btn-send-mail {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        font-size: 12px !important;
+      }
+    }
+    .social-footer {
+      a {
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+  }
+
+  .line {
+    border: 1px solid #fff;
+  }
+
+  .footer-content {
+    color: #fff;
+    font-size: 14px;
+    padding: 25px 0 10px 0;
+    
+    .information {
+      p {
+        padding: 8px 0;
+      }
+      
+      li {
+        padding: 8px 0;
+      }
+
+      li i {
+        padding-right: 4px;
+      }
+    }
+
+    .tab-link {
+      h4 {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 14px;
+      }
+      ul {
+        list-style: circle;
+        a {
+          display: block;
+          padding: 6px 0;
+          color: #fff;
+          &:hover {
+            color: variables.$colorShopHover;
+          }
+        }
+      }
+    }
+
+    .title-footer h4 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .footer-support {
+      li {
+        padding: 6px 0;
+      }
+      a {
+        color: variables.$txt-primary;
+      }
+    }
+  }
+}

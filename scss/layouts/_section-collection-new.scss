@@ -1,0 +1,37 @@
+@use "../base/variables";
+
+.section_collection_new {
+  margin-top: 14px;
+  .top-head {
+    margin-bottom: 15px;
+    h2 {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-left: 12px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #000;
+      }
+    }
+    a {
+      font-size: 14px;
+      color: #828282;
+    }
+    i {
+      font-size: 10px;
+    }
+  }
+  .item {
+    margin-right: 12px;
+    img {
+      height: 148px;
+    }
+  }
+}
