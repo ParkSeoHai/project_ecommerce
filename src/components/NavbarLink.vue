@@ -3,20 +3,22 @@
         <router-link 
             :to="`/`"
             class="nav-link"
-            :title="`${props.linkText}`"
+            :title="`${navLinkObj.linkText}`"
         >
             <span class="content">
                 <i 
                     class="icon"
-                    :class="props.icon"
+                    :class="navLinkObj.icon"
                 ></i>
-                <span>{{ props.linkText }}</span>
+                <span>{{ navLinkObj.linkText }}</span>
             </span>
-            <i v-if="isMore" class="bi bi-chevron-right icon"></i>
+            <i v-if="navLinkObj.isMore" class="bi bi-chevron-right icon"></i>
         </router-link>
     </li>
 </template>
 
 <script setup>
-const props = defineProps(['linkText', 'icon', 'isMore']);
+
+// Props import from components/NavbarLink.vue
+const { navLinkObj } = defineProps(['navLinkObj']);
 </script>

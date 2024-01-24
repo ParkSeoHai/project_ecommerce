@@ -7,6 +7,8 @@
 </template>
 
 <script setup>
+
+// Props import from Home/HomebannerGroup.vue
 const { imageUrl } = defineProps(['imageUrl']);
 
 </script>

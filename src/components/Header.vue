@@ -2,7 +2,7 @@
     <!-- Header -->
     <header class="header">
         <!-- Header top -->
-        <HeaderTop />
+        <HeaderTop @handle-modal="handleModal" />
         <!-- Header bottom -->
         <HeaderBottom />
     </header>
@@ -12,4 +12,11 @@
 // Component
 import HeaderTop from './HeaderTop.vue';
 import HeaderBottom from './HeaderBottom.vue';
+
+const $emits = defineEmits(['handle-modal']);
+
+// Handle emit event to App.vue
+function handleModal(value) {
+    $emits('handle-modal', value);
+}
 </script>

@@ -4,19 +4,23 @@
         <div class="container p-0">
             <div class="group-collection-new">
                 <div class="row">
-                    <!-- Sản phẩm mới -->
-                    <HomeCollectionGroupItem
-                        :title="'Sản phẩm mới'"
-                        :linkHref="'/sanphammoi'"
-                        :listProduct="listProductNews"
-                    />
+                    <div class="col-6">
+                        <!-- Sản phẩm mới -->
+                        <HomeCollectionGroupItem
+                            :title="'Sản phẩm mới'"
+                            :linkHref="'/sanphammoi'"
+                            :listProduct="listProductNews"
+                        />
+                    </div>
                     
-                    <!-- Sản phẩm bán chạy -->
-                    <HomeCollectionGroupItem
-                        :title="'Sản phẩm bán chạy'"
-                        :linkHref="'/sanphambanchay'"
-                        :listProduct="listProductHots"
-                    />
+                    <div class="col-6">
+                        <!-- Sản phẩm bán chạy -->
+                        <HomeCollectionGroupItem
+                            :title="'Sản phẩm bán chạy'"
+                            :linkHref="'/sanphambanchay'"
+                            :listProduct="listProductHots"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
                     <div class="col-9">
                         <ul class="list d-flex align-items-center justify-content-between">
                             <li class="item">
-                                <a href="ProductDetail.html">
+                                <a href="#">
                                     <span class="icon">
                                         <i class="bi bi-tencent-qq"></i>
                                     </span>

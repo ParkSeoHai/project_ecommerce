@@ -53,6 +53,7 @@
   }
 
   .header-dropdown_content {
+    position: relative;
     .title {
       color: variables.$txt-dark;
       margin-bottom: 5px;
@@ -60,6 +61,18 @@
       font-size: 17px;
       font-weight: 600;
       text-align: center;
+    }
+    .icon-close {
+      position: absolute;
+      top: -5px;
+      right: -15px;
+      font-size: 2rem;
+      color: variables.$color-dark;
+      &:hover {
+        cursor: pointer;
+        color: variables.$color-white;
+        background-color: rgb(232, 8, 8);
+      }
     }
     .desc {
       color: #555;

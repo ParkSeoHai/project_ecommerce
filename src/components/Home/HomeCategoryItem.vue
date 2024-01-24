@@ -15,5 +15,7 @@
 </template>
 
 <script setup>
+
+// Props import from Home/HomeCategory.vue
 const props = defineProps(['imageUrl', 'categoryName']);
 </script>

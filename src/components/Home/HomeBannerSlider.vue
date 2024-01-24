@@ -7,5 +7,7 @@
 </template>
 
 <script setup>
+
+// Props import from Home/HomeSlider.vue
 const { imageUrl } = defineProps(['imageUrl']);
 </script>

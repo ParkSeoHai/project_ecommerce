@@ -242,6 +242,9 @@ html, body {
     width: 420px;
   }
 }
+.header .header-dropdown_content {
+  position: relative;
+}
 .header .header-dropdown_content .title {
   color: #333;
   margin-bottom: 5px;
@@ -249,6 +252,18 @@ html, body {
   font-size: 17px;
   font-weight: 600;
   text-align: center;
+}
+.header .header-dropdown_content .icon-close {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  font-size: 2rem;
+  color: #000;
+}
+.header .header-dropdown_content .icon-close:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(232, 8, 8);
 }
 .header .header-dropdown_content .desc {
   color: #555;
@@ -1126,15 +1141,15 @@ html, body {
   color: #1877f2;
 }
 
-.modal {
+.modal-main {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
   background-color: #000;
   opacity: 0.5;
+  z-index: 99;
 }
 
 /*# sourceMappingURL=main.css.map */
