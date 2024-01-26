@@ -4,11 +4,11 @@
             <a href="#" class="link-img-cat">
                 <div class="box-img">
                     <img
-                        :src="props.imageUrl"
-                        :alt="props.categoryName"
+                        :src="categoryObj.imageUrl"
+                        :alt="categoryObj.name"
                     >
                 </div>
-                <span class="banner-content">{{ props.categoryName }}</span>
+                <span class="banner-content">{{ categoryObj.name }}</span>
             </a>
         </div>
     </div>
@@ -17,5 +17,5 @@
 <script setup>
 
 // Props import from Home/HomeCategory.vue
-const props = defineProps(['imageUrl', 'categoryName']);
+const { categoryObj } = defineProps(['categoryObj']);
 </script>

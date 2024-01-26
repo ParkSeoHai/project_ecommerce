@@ -4,59 +4,10 @@
             <div class="bg-color-white">
                 <div class="list-cat d-flex justify-content-between">
                     <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/applewatch-2.jpg'"
-                        :categoryName="'Apple Watch DZ09'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-2.png'"
-                        :categoryName="'Samsung S23 Series'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-3.png'"
-                        :categoryName="'Samsung S23 Series'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-4.png'"
-                        :categoryName="'Xiaomi Redmi Note 12'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/applewatch-2.jpg'"
-                        :categoryName="'Apple Watch DZ09'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-2.png'"
-                        :categoryName="'Samsung S23 Series'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-3.png'"
-                        :categoryName="'Samsung S23 Series'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-4.png'"
-                        :categoryName="'Xiaomi Redmi Note 12'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-3.png'"
-                        :categoryName="'Samsung S23 Series'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-4.png'"
-                        :categoryName="'Xiaomi Redmi Note 12'"
-                    />
-                    <!-- Item -->
-                    <HomeCategoryItem 
-                        :imageUrl="'src/assets/images/section-category-4.png'"
-                        :categoryName="'Xiaomi Redmi Note 12'"
+                    <HomeCategoryItem
+                        v-for="(category, index) in listCategories"
+                        :key="index"
+                        :categoryObj="category"
                     />
                 </div>
             </div>
@@ -66,4 +17,47 @@
 
 <script setup>
 import HomeCategoryItem from './HomeCategoryItem.vue';
+
+const listCategories = [
+    {
+        imageUrl: 'src/assets/images/section-category-4.png',
+        name: 'Xiaomi Redmi Note 12'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-3.png',
+        name: 'Samsung S23 Series'
+    },
+    {
+        imageUrl: 'src/assets/images/applewatch-2.jpg',
+        name: 'Apple Watch DZ09'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-4.png',
+        name: 'Xiaomi Redmi Note 12'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-3.png',
+        name: 'Samsung S23 Series'
+    },
+    {
+        imageUrl: 'src/assets/images/applewatch-2.jpg',
+        name: 'Apple Watch DZ09'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-4.png',
+        name: 'Xiaomi Redmi Note 12'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-3.png',
+        name: 'Samsung S23 Series'
+    },
+    {
+        imageUrl: 'src/assets/images/applewatch-2.jpg',
+        name: 'Apple Watch DZ09'
+    },
+    {
+        imageUrl: 'src/assets/images/section-category-4.png',
+        name: 'Xiaomi Redmi Note 12'
+    }
+];
 </script>

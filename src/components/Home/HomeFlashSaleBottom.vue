@@ -1,10 +1,13 @@
 <template>
     <div class="flash-sale-bottom">
         <div class="link">
-            <a href="#">
+            <router-link
+                to="/"
+                class="btn"
+            >
                 <span>Xem tất cả</span>
                 <i class="bi bi-chevron-double-right"></i>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>

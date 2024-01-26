@@ -1,7 +1,13 @@
 /* Banner group */
 #banner-group {
   margin-top: 14px;
-
+  .bg-color-white {
+    padding-top: 5px;
+  }
+  .banner-item {
+    padding-top: 10px;
+    
+  }
   img {
     width: 100%;
     height: 100%;

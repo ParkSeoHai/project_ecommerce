@@ -5,12 +5,16 @@
 #section-flash-sale {
   margin-top: 14px;
   .bg-flash-sale {
-    padding: 15px;
+    padding: 15px 0;
     background-color: variables.$bg-flashSale;
     border-radius: 8px;
+    &:hover .btn-arrow {
+      display: block;
+    }
   }
   // Top
   .flash-sale-top {
+    padding: 0 40px;
     .title {
       font-weight: 700;
       text-transform: uppercase;
@@ -74,51 +78,62 @@
   }
   // Body
   .flash-sale-body {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-top: 12px;
-    .item {
-      img {
-        height: 200px;
-      }
-      .fl_progressbar_group {
-        margin-top: 8px;
-        .icon i{
-          font-size: 16px;
-          color: red;
+    position: relative;
+    padding: 0 40px 40px 40px;
+    .block-body {
+      overflow: hidden;      
+    }
+    .list-product {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 12px;
+      transition: margin-left 0.4s linear;
+      .item {
+        margin-right: 10px;
+        max-width: 240px;
+        &:last-child {
+          margin-right: 0;
         }
-        span {
-          font-size: 12px;
-          margin-left: 6px;
+        img {
+          height: 200px;
         }
-        strong {
-          font-weight: 600;
+        .fl_progressbar_group {
+          margin-top: 8px;
+          .icon i{
+            font-size: 16px;
+            color: red;
+          }
+          span {
+            font-size: 12px;
+            margin-left: 6px;
+          }
+          strong {
+            font-weight: 600;
+          }
         }
-      }
-      .fl_progressbar {
-        position: relative;
-        width: 100%;
-        height: 8px;
-        margin-top: 6px;
-        margin-bottom: 8px;
-        border-radius: 4px;
-        background-color: #ff7171;
-      }
-      .fl_percent {
-        position: absolute;
-        height: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 4px;
-        background-color: #f32e2e;
+        .fl_progressbar {
+          position: relative;
+          width: 100%;
+          height: 8px;
+          margin-top: 6px;
+          margin-bottom: 8px;
+          border-radius: 4px;
+          background-color: #ff7171;
+        }
+        .fl_percent {
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 4px;
+          background-color: #f32e2e;
+        }
       }
     }
   }
   // Bottom
   .flash-sale-bottom {
-    padding-top: 24px;
-    padding-bottom: 6px;
+    padding-top: 8px;
     .link {
       text-align: center;
       a {

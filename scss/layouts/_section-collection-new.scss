@@ -29,9 +29,36 @@
     }
   }
   .item {
-    margin-right: 12px;
+    margin-right: 10px;
+    width: 200px;
+    &:last-child {
+      margin-right: 0;
+    }
     img {
       height: 148px;
     }
+  }
+
+  .blog-group {
+    position: relative;
+    overflow: hidden;
+    .btn-arrow {
+      color: variables.$color-dark;
+      padding: 0;
+    }
+    .btn-arrow-left {
+      left: -8px;
+    }
+    .btn-arrow-right {
+      right: -8px;
+    }
+    &:hover .btn-arrow {
+      display: block;
+    }
+  }
+
+  .list-product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -5,9 +5,11 @@
             <div class="bg-color-white">
                 <div class="row">
                     <!-- Item -->
-                    <HomeBannerGroupItem :imageUrl="'src/assets/images/banner-group-1.webp'" />
-                    <HomeBannerGroupItem :imageUrl="'src/assets/images/banner-group-2.webp'" />
-                    <HomeBannerGroupItem :imageUrl="'src/assets/images/banner-group-3.webp'" />
+                    <HomeBannerGroupItem 
+                        v-for="(bannerItem, index) in listBanners"
+                        :key="index"
+                        :bannerObj="bannerItem"
+                    />
                 </div>
             </div>
         </div>
@@ -16,4 +18,19 @@
 
 <script setup>
 import HomeBannerGroupItem from './HomeBannerGroupItem.vue';
+
+const listBanners = [
+    {
+        imageUrl: 'src/assets/images/banner-group-1.webp',
+        linkUrl: '/banner-1'
+    },
+    {
+        imageUrl: 'src/assets/images/banner-group-2.webp',
+        linkUrl: '/banner-2'
+    },
+    {
+        imageUrl: 'src/assets/images/banner-group-3.webp',
+        linkUrl: '/banner-3'
+    }
+];
 </script>
