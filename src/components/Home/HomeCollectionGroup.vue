@@ -71,12 +71,44 @@ const listProductNews = ref([
         colorCount: 5,
         price: '19,690,000₫',
         sale: '17,690,000₫'
+    },
+    { 
+        id: 3,
+        name: 'Đồng hồ thông minh XTF',
+        image: 'src/assets/images/applewatch-4.jpg',
+        colorCount: 5,
+        price: '19,690,000₫',
+        sale: '17,690,000₫'
+    },
+    { 
+        id: 4,
+        name: 'Đồng hồ thông minh XTF',
+        image: 'src/assets/images/applewatch-4.jpg',
+        colorCount: 5,
+        price: '19,690,000₫',
+        sale: '17,690,000₫'
+    },
+    { 
+        id: 5,
+        name: 'Đồng hồ thông minh XTF',
+        image: 'src/assets/images/applewatch-4.jpg',
+        colorCount: 5,
+        price: '19,690,000₫',
+        sale: '17,690,000₫'
     }
 ]);
 
 const listProductHots = ref([
     { 
         id: 1,
+        name: 'Đồng hồ thông minh XTF',
+        image: 'src/assets/images/applewatch-4.jpg',
+        colorCount: 5,
+        price: '19,690,000₫',
+        sale: '17,690,000₫'
+    },
+    { 
+        id: 5,
         name: 'Đồng hồ thông minh XTF',
         image: 'src/assets/images/applewatch-4.jpg',
         colorCount: 5,

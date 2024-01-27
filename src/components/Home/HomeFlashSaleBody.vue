@@ -1,6 +1,7 @@
 <template>
     <div class="flash-sale-body">
-        <button 
+        <button
+            v-if="circleCount > 1"
             class="btn-arrow btn-arrow-left"
             @click.prevent="handleArrowProduct(1)"
         >
@@ -23,8 +24,8 @@
                 />
             </div>
             <ul
+                v-if="circleCount > 1"
                 class="list-circle"
-                v-if="listProduct.length > 2"
             >
                 <li class="item"
                     v-for="n in circleCount"
@@ -35,6 +36,7 @@
             </ul>
         </div>
         <button
+            v-if="circleCount > 1"
             class="btn-arrow btn-arrow-right"
             @click.prevent="handleArrowProduct(-1)"
         >

@@ -28,23 +28,16 @@
       font-size: 10px;
     }
   }
-  .item {
-    margin-right: 10px;
-    width: 200px;
-    &:last-child {
-      margin-right: 0;
-    }
-    img {
-      height: 148px;
-    }
-  }
 
-  .blog-group {
+  .block-group {
     position: relative;
-    overflow: hidden;
+    padding-bottom: 5px;
     .btn-arrow {
       color: variables.$color-dark;
       padding: 0;
+      &:hover {
+        color: #555;
+      }
     }
     .btn-arrow-left {
       left: -8px;
@@ -56,9 +49,35 @@
       display: block;
     }
   }
-
-  .list-product {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  .block-list-product {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+    .list-product {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      transition: margin-left 0.3s linear;
+      .item {
+        margin-right: 15px;
+        width: 195px;
+        &:last-child {
+          margin-right: 0;
+        }
+        img {
+          height: 148px;
+        }
+      }
+    }
+    .list-circle {
+      bottom: 0;
+      .item {
+        width: 10px;
+        height: 10px;
+        border-color: variables.$txt-primary;
+        &.active {
+          background-color: variables.$txt-primary;
+        }
+      }
+    }
   }
 }

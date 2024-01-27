@@ -11,7 +11,11 @@
                     <div 
                         class="banner-slider"
                     >
-                        <button @click.prevent="showSlider(-1)" class="btn-arrow btn-arrow-left">
+                        <button
+                            v-if="imageSliders.length > 1"
+                            @click.prevent="showSlider(-1)"
+                            class="btn-arrow btn-arrow-left"
+                        >
                             <i class="bi bi-chevron-compact-left"></i>
                         </button>
                         <a 
@@ -23,12 +27,16 @@
                                 alt=""
                             >
                         </a>
-                        <button @click.prevent="showSlider(1)" class="btn-arrow btn-arrow-right">
+                        <button
+                            v-if="imageSliders.length > 1"
+                            @click.prevent="showSlider(1)"
+                            class="btn-arrow btn-arrow-right"
+                        >
                             <i class="bi bi-chevron-compact-right"></i>
                         </button>
                         <ul
                             class="list-circle"
-                            v-if="imageSliders.length > 2"
+                            v-if="imageSliders.length > 1"
                         >
                             <li 
                                 class="item"

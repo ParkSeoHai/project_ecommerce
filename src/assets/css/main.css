@@ -677,7 +677,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 12px;
-  transition: margin-left 0.4s linear;
+  transition: margin-left 0.3s linear;
 }
 #section-flash-sale .flash-sale-body .list-product .item {
   margin-right: 10px;
@@ -771,36 +771,56 @@ html, body {
 .section_collection_new .top-head i {
   font-size: 10px;
 }
-.section_collection_new .item {
-  margin-right: 10px;
-  width: 200px;
-}
-.section_collection_new .item:last-child {
-  margin-right: 0;
-}
-.section_collection_new .item img {
-  height: 148px;
-}
-.section_collection_new .blog-group {
+.section_collection_new .block-group {
   position: relative;
-  overflow: hidden;
+  padding-bottom: 5px;
 }
-.section_collection_new .blog-group .btn-arrow {
+.section_collection_new .block-group .btn-arrow {
   color: #000;
   padding: 0;
 }
-.section_collection_new .blog-group .btn-arrow-left {
+.section_collection_new .block-group .btn-arrow:hover {
+  color: #555;
+}
+.section_collection_new .block-group .btn-arrow-left {
   left: -8px;
 }
-.section_collection_new .blog-group .btn-arrow-right {
+.section_collection_new .block-group .btn-arrow-right {
   right: -8px;
 }
-.section_collection_new .blog-group:hover .btn-arrow {
+.section_collection_new .block-group:hover .btn-arrow {
   display: block;
 }
-.section_collection_new .list-product {
+.section_collection_new .block-list-product {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.section_collection_new .block-list-product .list-product {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  transition: margin-left 0.3s linear;
+}
+.section_collection_new .block-list-product .list-product .item {
+  margin-right: 15px;
+  width: 195px;
+}
+.section_collection_new .block-list-product .list-product .item:last-child {
+  margin-right: 0;
+}
+.section_collection_new .block-list-product .list-product .item img {
+  height: 148px;
+}
+.section_collection_new .block-list-product .list-circle {
+  bottom: 0;
+}
+.section_collection_new .block-list-product .list-circle .item {
+  width: 10px;
+  height: 10px;
+  border-color: #1877f2;
+}
+.section_collection_new .block-list-product .list-circle .item.active {
+  background-color: #1877f2;
 }
 
 .section_collection_group {
