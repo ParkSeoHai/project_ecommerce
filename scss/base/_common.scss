@@ -20,7 +20,7 @@ a {
 
 .icon {
   font: {
-    size: 24px;
+    size: 2.4rem;
   };
 }
 
@@ -37,7 +37,7 @@ a {
   transform: translateY(-50%);
   background-color: transparent;
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
   border: none;
   z-index: 100;
   display: none;
@@ -110,30 +110,30 @@ a {
       line-height: 18px;
       padding-top: 10px;
       font: {
-        size: 14px;
+        size: 1.4rem;
         weight: 400;
       };
       color: variables.$txt-dark;
     }
     .list-variants {
-      font-size: 12px;
+      font-size: 1.2rem;
       color: variables.$txt-dark;
     }
     .box-pro-prices {
       span {
         font: {
-          size: 14px;
+          size: 1.4rem;
           weight: 600;
         };
         color: red;
       }
       .compare-price {
-        font-size: 13px;
+        font-size: 1.3rem;
         color: #c5c5c5;
       }
     }
     .hash-tag-loop {
-      font-size: 12px;
+      font-size: 1.2rem;
       background: #f3f4f6;
       border-radius: 6px;
       margin-top: 8px;
@@ -150,7 +150,7 @@ a {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 20px;
+      font-size: 2rem;
       width: 40px;
       height: 40px;
       text-align: center;

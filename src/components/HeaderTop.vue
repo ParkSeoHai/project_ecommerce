@@ -6,7 +6,7 @@
                 <Logo />
                 <!-- Search -->
                 <div class="col-4 header-search p-0">
-                    <form id="formSearch">
+                    <form id="formSearch" class="header-search-form">
                         <div class="form-group">
                             <label for="header-search-input" hidden="hidden"></label>
                             <input type="text" class="form-control header-search-input" id="header-search-input" placeholder="Nhập tìm kiếm...">

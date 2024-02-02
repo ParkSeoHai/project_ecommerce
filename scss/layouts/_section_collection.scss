@@ -7,7 +7,7 @@
     margin-bottom: 15px;
     h2 {
       position: relative;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
       text-transform: uppercase;
       padding-left: 12px;
@@ -29,7 +29,7 @@
         border: 1px solid #ededed;
         border-radius: 5px;
         background: #ededed;
-        font-size: 14px;
+        font-size: 1.4rem;
         transition: background-color ease-in-out 0.3s;
         &:hover {
           background-color: variables.$bg-primary;
@@ -64,7 +64,7 @@
     .link {
       text-align: center;
       a {
-        font-size: 14px;
+        font-size: 1.4rem;
         background-color: variables.$bg-primary;
         color: variables.$color-white;
         padding: 12px 62px;
@@ -76,7 +76,7 @@
           border: 1px solid variables.$txt-primary;
         }
         i {
-          font-size: 10px;
+          font-size: 1rem;
         }
       }
     }

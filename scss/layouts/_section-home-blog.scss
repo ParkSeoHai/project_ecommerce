@@ -7,7 +7,7 @@
     margin-bottom: 15px;
     h2 {
       position: relative;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
       text-transform: uppercase;
       padding-left: 12px;
@@ -22,11 +22,11 @@
       }
     }
     a {
-      font-size: 14px;
+      font-size: 1.4rem;
       color: #828282;
     }
     i {
-      font-size: 10px;
+      font-size: 1rem;
     }
   }
 
@@ -40,23 +40,23 @@
     }
     .title {
       @include mixin.d-webkit-box();
-      font-size: 17px;
+      font-size: 1.7rem;
       font-weight: 600;
       margin-top: 12px;
       line-height: 20px;
     }
     .desc {
       @include mixin.d-webkit-box(3);
-      font-size: 14px;
+      font-size: 1.4rem;
       color: variables.$txt-dark;
       margin-top: 8px;
       line-height: 20px;
     }
     .time {
       margin-top: 8px;
-      font-size: 13px;
+      font-size: 1.3rem;
       .icon {
-        font-size: 13px;
+        font-size: 1.3rem;
         margin-right: 6px;
       }
     }
@@ -64,7 +64,7 @@
     .item {
       margin-bottom: 12px;
       .title {
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
   }
