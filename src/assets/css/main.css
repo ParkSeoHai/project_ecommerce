@@ -1018,18 +1018,21 @@ body {
 .product-detail .product-thumb {
   margin-top: 10px;
   width: 100%;
-  height: 100px;
   overflow: hidden;
 }
 .product-detail .product-thumb .list {
   display: grid;
-  grid-template-columns: repeat(100, 1fr);
-  gap: 5px;
+  grid-template-columns: repeat(10, 1fr);
+  transition: margin-left 0.4s linear;
 }
 .product-detail .product-thumb .item {
-  width: 90px;
+  width: 85px;
   height: 85px;
+  margin-right: 5px;
   cursor: pointer;
+}
+.product-detail .product-thumb .item:last-child {
+  margin-right: 0;
 }
 .product-detail .product-thumb .item.active {
   border: 1px solid #333;
@@ -1154,7 +1157,6 @@ body {
   color: #fff;
 }
 .product-detail .product-content-info .location-store__dropdown {
-  display: none;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   border-top: none;
