@@ -8,15 +8,6 @@
     <div id="product-template" class="product-page">
         <!-- Section product detail -->
         <ProductDetailInfo />
-
-        <div class="row pt-4">
-            <div class="col-9">
-                <div class="bg-color-white"></div>
-            </div>
-            <div class="col-3">
-                <div class="bg-color-white"></div>
-            </div>
-        </div>
     </div>
 </template>
 

@@ -81,6 +81,11 @@ a {
   border-radius: 8px;
 }
 
+.disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
 /* Button arrow */
 .btn-arrow {
   position: absolute;
@@ -1233,6 +1238,53 @@ body {
   font-size: 1.4rem;
   color: #333;
   line-height: 20px;
+}
+
+/* Product description */
+.product-desc-tab {
+  color: #000;
+  margin-top: 5px;
+}
+.product-desc-tab__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.product-desc-tab__content {
+  height: 400px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.product-desc-tab__content.show {
+  height: 100%;
+}
+.product-desc-tab__content h1, .product-desc-tab__content h2, .product-desc-tab__content h3, .product-desc-tab__content h4, .product-desc-tab__content h5, .product-desc-tab__content h6 {
+  padding-bottom: 12px;
+  font-size: 2rem;
+}
+.product-desc-tab__content h2, .product-desc-tab__content b, .product-desc-tab__content strong {
+  font-weight: 700;
+}
+.product-desc-tab__content p {
+  line-height: 20px;
+  font-size: 1.6rem;
+  padding-bottom: 15px;
+}
+.product-desc-tab .view-all-tab__btn {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 14px 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.product-desc-tab .view-all-tab__btn--icon {
+  margin-right: 5px;
+}
+.product-desc-tab .view-all-tab__btn:hover {
+  opacity: 0.8;
 }
 
 .product-search {

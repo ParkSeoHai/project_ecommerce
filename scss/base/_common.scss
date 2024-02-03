@@ -30,6 +30,11 @@ a {
   border-radius: 8px;
 }
 
+.disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
 /* Button arrow */
 .btn-arrow {
   position: absolute;

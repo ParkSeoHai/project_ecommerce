@@ -1,5 +1,6 @@
 <template>
     <section class="product-detail">
+        <!-- Detail -->
         <div class="row">
             <div class="col-9 product-info-detail">
                 <div class="bg-color-white">
@@ -16,12 +17,12 @@
                                 </button>
                                 <a href="#">
                                     <img
-                                        :src="product.images[activeThumbnail].src"
+                                        :src="product.info[activeThumbnail].src"
                                         :alt="product.name"
                                     >
                                 </a>
                                 <button
-                                    v-if="activeThumbnail < product.images.length - 1"
+                                    v-if="activeThumbnail < product.info.length - 1"
                                     class="btn-arrow btn-arrow-right"
                                     @click.prevent="handleImageActive(-1)"
                                 >
@@ -33,19 +34,19 @@
                                     class="list"
                                     :style="[
                                         `width: ${widthThumbnail}px`,
-                                        `grid-template-columns: repeat(${product.images.length}, 1fr)`,
+                                        `grid-template-columns: repeat(${product.info.length}, 1fr)`,
                                         `margin-left: ${marginLeftThumbnail}px`
                                     ]"
                                 >
                                     <div
+                                        v-for="(item, index) in product.info"
+                                        :key="index"
                                         class="item"
                                         :class="index === activeThumbnail ? 'active' : ''"
-                                        v-for="(image, index) in product.images"
-                                        :key="index"
                                         @click.prevent="activeThumbnail = index"
                                     >
                                         <img
-                                            :src="image.src"
+                                            :src="item.src"
                                             :alt="product.name"
                                         >
                                     </div>
@@ -61,10 +62,10 @@
                                         <span
                                             class="subtext"
                                             :class="[
-                                                product.quantity > 0 ? 'green' : 'red'
+                                                productQuantity > 0 ? 'green' : 'red'
                                             ]"
                                         >
-                                            {{ product.quantity > 0 ? 'Còn hàng' : 'Hết hàng' }}
+                                            {{ productQuantity > 0 ? 'Còn hàng' : 'Hết hàng' }}
                                         </span>
                                     </h1>
                                 </div>
@@ -93,21 +94,24 @@
                                 <div class="select-wrap">
                                     <div class="header">
                                         <div class="pro-color">
-                                            <span>Màu sắc: <b class="fw-bold">{{ product.images[activeThumbnail].color }}</b></span>
+                                            <span>Màu sắc: <b class="fw-bold">{{ product.info[activeThumbnail].color }}</b></span>
                                         </div>
                                     </div>
                                     <div class="select-list py-2">
                                         <div
-                                            class="item"
-                                            :class="index === activeThumbnail ? 'active' : ''"
-                                            v-for="(image, index) in product.images"
+                                            v-for="(item, index) in product.info"
                                             :key="index"
+                                            class="item"
+                                            :class="[
+                                                index === activeThumbnail ? 'active' : '',
+                                                item.quantity > 0 ? '' : 'disabled'
+                                            ]"
                                             @click.prevent="activeThumbnail = index"
                                         >
                                             <img
-                                                :src="image.src"
+                                                :src="item.src"
                                                 :alt="product.name">
-                                            <span>{{ image.color }}</span>
+                                            <span>{{ item.color }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +154,7 @@
                                 <div class="wrap-addcart pt-3">
                                     <button
                                         class="btn btn-primary w-100"
-                                        :class="product.quantity > 0 ? '' : 'disabled'"
+                                        :class="productQuantity > 0 ? '' : 'disabled'"
                                         @click.prevent="addCart"
                                     >
                                         <span class="fw-bold">THÊM VÀO GIỎ</span>
@@ -158,7 +162,10 @@
                                     </button>
                                 </div>
                                 <div class="location-store">
-                                    <div class="location-store__main">
+                                    <div
+                                        v-if="product.locationStore.length > 0"
+                                        class="location-store__main"
+                                    >
                                         <img class="location-store__img" src="../../assets/images/location_store.webp" alt="">
                                         <p class="location-store__text">Có {{ product.locationStore.length }} cửa hàng còn sản phẩm</p>
                                         <button
@@ -216,11 +223,23 @@
                 </div>
             </div>
         </div>
+        <!-- Description -->
+        <div class="row pt-4">
+            <div class="col-9">
+                <ProductDescription />
+            </div>
+            <div class="col-3">
+                <ProductSpecifications />
+            </div>
+        </div>
     </section>
 </template>
 
 <script setup>
 import { ref, watch, watchEffect } from "vue";
+// Components
+import ProductDescription from './ProductDescription.vue';
+import ProductSpecifications from './ProductSpecifications.vue'
 
 const product = {
     id: 1,
@@ -235,29 +254,34 @@ const product = {
     },
     totalSale: 10,
     price: 32850000,
-    quantity: 10,
-    images: [
+    info: [
         {
+            quantity: 10,
             src: 'http://localhost:5173/src/assets/images/flashsale-product-3.webp',
             color: 'Đen bóng'
         },
         {
+            quantity: 5,
             src: 'http://localhost:5173/src/assets/images/applewatch-4.jpg',
             color: 'Xanh'
         },
         {
+            quantity: 1,
             src: 'http://localhost:5173/src/assets/images/flashsale-product-5.webp',
             color: 'Vàng'
         },
         {
+            quantity: 0,
             src: 'http://localhost:5173/src/assets/images/applewatch-4.jpg',
             color: 'Đỏ'
         },
         {
+            quantity: 5,
             src: 'http://localhost:5173/src/assets/images/flashsale-product-5.webp',
             color: 'Xanh than'
         },
         {
+            quantity: 0,
             src: 'http://localhost:5173/src/assets/images/flashsale-product-3.webp',
             color: 'Trắng'
         }
@@ -288,7 +312,7 @@ const product = {
 };
 
 // Calc width block thumbnail - 1 item: 95px
-const widthThumbnail = product.images.length * 95;
+const widthThumbnail = product.info.length * 95;
 
 // Variable storage value active thumbnail
 let activeThumbnail = ref(0);
@@ -314,6 +338,12 @@ let priceString = formatterPrice.format(price.value);
 // Price sale display
 let priceSaleString = formatterPrice.format(priceSale.value);
 
+// Calc quantity product
+let productQuantity = 0;
+product.info.map((item) => {
+    productQuantity += item.quantity;
+});
+
 // Variable value margin-left style
 let marginLeftThumbnail = ref(0);
 
@@ -329,7 +359,7 @@ function handleImageActive(n) {
 function addCart() {
     const cartItem = {
         name: product.name,
-        imageSrc: product.images[activeThumbnail.value],
+        imageSrc: product.info[activeThumbnail.value],
         memory: product.memory[activeMemory.value],
         price: priceSale.value,
         quantity: count.value
@@ -341,15 +371,15 @@ function addCart() {
 // Watch activeThumbnail -> Calc value margin-left
 watchEffect(() => {
     // Handle style value margin-left thumbnail
-    if(product.images.length < 5) {
+    if(product.info.length < 5) {
         marginLeftThumbnail.value = 0;
-    } else if(activeThumbnail.value + 5 >= product.images.length) {
-        marginLeftThumbnail.value = -(product.images.length - 5) * 95;
+    } else if(activeThumbnail.value + 5 >= product.info.length) {
+        marginLeftThumbnail.value = -(product.info.length - 5) * 95;
     } else {
         marginLeftThumbnail.value = -(activeThumbnail.value * 95);
     }
 
-    if(product.images.length - activeThumbnail.value >= 5 && activeThumbnail.value > 0) {
+    if(product.info.length - activeThumbnail.value >= 5 && activeThumbnail.value > 0) {
         marginLeftThumbnail.value += 95;
     }
 })
