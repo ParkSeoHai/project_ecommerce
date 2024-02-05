@@ -12,8 +12,37 @@
                 ></i>
                 <span>{{ navLinkObj.linkText }}</span>
             </span>
-            <i v-if="navLinkObj.isMore" class="bi bi-chevron-right icon"></i>
+            <i v-if="navLinkObj.subnav" class="bi bi-chevron-right icon"></i>
         </router-link>
+        <!-- Sub nav -->
+        <ul
+            v-if="navLinkObj.subnav"
+            class="nav-dropdown"
+        >
+            <!-- Item -->
+            <li
+                class="nav-dropdown__item--lv1"
+                v-for="subnav in navLinkObj.subnav"
+                :key="subnav.subid"
+            >
+                <router-link
+                    :to="`/${subnav.linkUrl}`"
+                    class="nav-dropdown__link lv1"
+                >{{ subnav.title }}</router-link>
+                <ul class="subnav-dropdown">
+                    <li
+                        class="nav-dropdown__item--lv2"
+                        v-for="subnavItem in subnav.item"
+                        :key="subnavItem.id"
+                    >
+                        <router-link
+                            :to="`/${subnav.linkUrl}/${subnavItem.linkUrl}`"
+                            class="nav-dropdown__link"
+                        >{{ subnavItem.linkText }}</router-link>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </li>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <!-- Home Slider -->
-    <section id="home-slider">
+    <section id="home-slider" class="home-slider">
         <div class="container p-0">
             <div class="row">
                 <div class="col-3">

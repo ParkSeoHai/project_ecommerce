@@ -24,16 +24,24 @@
     }
     .menu-col {
       gap: 6px;
-      a {
-        padding: 8px;
+      .menu-item {
+        padding: 8px 14px;
         border: 1px solid #ededed;
         border-radius: 5px;
         background: #ededed;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         transition: background-color ease-in-out 0.3s;
+        cursor: pointer;
+        
         &:hover {
           background-color: variables.$bg-primary;
           color: variables.$color-white;
+        }
+
+        &.active {
+          background-color: variables.$bg-primary;
+          color: variables.$color-white;
+          pointer-events: none;
         }
       }
     }
